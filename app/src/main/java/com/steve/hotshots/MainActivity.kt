@@ -15,9 +15,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val frag = intent.getStringExtra("frag")
-        var targetFragment: Fragment? = null
-
         // when activity create
         showListFragment()
     }

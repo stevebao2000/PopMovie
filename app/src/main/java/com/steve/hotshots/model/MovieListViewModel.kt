@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class MovieListViewModel: ViewModel() {
     var movies = MutableLiveData<MutableList<MovieEntry>>()
-    var list = mutableListOf<MovieEntry>()
+    var list = ArrayList<MovieEntry>()
 
     fun addMovies(movieList: List<MovieEntry>) {
         list.addAll(movieList)
