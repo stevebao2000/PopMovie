@@ -12,7 +12,11 @@ import com.steve.hotshots.model.Constants
 import com.steve.hotshots.model.MovieEntry
 import com.steve.hotshots.model.MovieListViewModel
 import com.steve.hotshots.repository.network.MovieService
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ListFragment : Fragment() {
@@ -32,9 +36,13 @@ class ListFragment : Fragment() {
     ): View {
         binding = FragmentListBinding.inflate(inflater, container, false)
         val root = binding.root
+        CoroutineScope(IO).launch {
+            getPopularMovies()
+        }
+
         val movieAdapter = MovieAdapter(requireContext(), movieViewModel.list)
         binding.rvMovies.adapter = movieAdapter
-        // TODO - implement recycle view
+
         return root
     }
 
