@@ -9,13 +9,12 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.steve.hotshots.R
-import com.steve.hotshots.databinding.FragmentListBinding
+import com.steve.hotshots.databinding.FragmentEntryBinding
 import com.steve.hotshots.model.MovieListViewModel
-import kotlinx.android.synthetic.main.fragment_entry.*
 
 class EntryFragment : Fragment() {
 
-    lateinit var binding: FragmentListBinding
+    lateinit var binding: FragmentEntryBinding
     lateinit var movieViewModel: MovieListViewModel
 
     var movieIndex = 0
@@ -31,20 +30,21 @@ class EntryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentListBinding.inflate(inflater, container, false)
+        binding = FragmentEntryBinding.inflate(inflater, container, false)
         val root = binding.root
 
-        val movie = movieViewModel.list.get(movieIndex)
-        title.text = movie.title
-        genre.text = movie.genreName
-        score.text = movie.score.toString()
-        year.text = movie.releaseYear.toString()
-        Glide.with(requireActivity())
-            .load(movie.thumbnail)
-            .placeholder(R.drawable.loading)
-            .fitCenter()
-            .into(imageView)
-
+        val movie = movieViewModel.getMovieAt(movieIndex)
+        binding.title.text = movie.title
+        binding.genre.text = movie.genreName
+        binding.score.text = movie.score.toString()
+        binding.year.text = movie.releaseYear.toString()
+        if (movie.thumbnail.length > 1) {
+            Glide.with(requireActivity())
+                .load(movie.thumbnail)
+                .placeholder(R.drawable.loading)
+                .fitCenter()
+                .into(binding.imageView)
+        }
         return root
     }
 

@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.steve.hotshots.R
 import com.steve.hotshots.apapter.MovieAdapter
 import com.steve.hotshots.databinding.FragmentListBinding
 import com.steve.hotshots.model.Constants
 import com.steve.hotshots.model.MovieEntry
 import com.steve.hotshots.model.MovieListViewModel
-import com.steve.hotshots.network.MovieService
+import com.steve.hotshots.repository.network.MovieService
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.withContext
 
