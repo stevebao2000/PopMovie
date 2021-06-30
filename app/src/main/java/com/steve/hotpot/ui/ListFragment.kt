@@ -1,4 +1,4 @@
-package com.steve.hotshots.ui
+package com.steve.hotpot.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.steve.hotshots.apapter.MovieAdapter
-import com.steve.hotshots.databinding.FragmentListBinding
-import com.steve.hotshots.model.Constants
-import com.steve.hotshots.model.MovieEntry
-import com.steve.hotshots.model.MovieListViewModel
-import com.steve.hotshots.repository.network.MovieService
+import com.steve.hotpot.apapter.MovieAdapter
+import com.steve.hotpot.databinding.FragmentListBinding
+import com.steve.hotpot.model.Constants
+import com.steve.hotpot.model.MovieEntry
+import com.steve.hotpot.model.MovieListViewModel
+import com.steve.hotpot.repository.network.MovieService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 

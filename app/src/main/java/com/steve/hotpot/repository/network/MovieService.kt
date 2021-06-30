@@ -1,7 +1,7 @@
-package com.steve.hotshots.repository.network
+package com.steve.hotpot.repository.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.steve.hotshots.model.MovieEntry
+import com.steve.hotpot.model.MovieEntry
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

@@ -1,6 +1,5 @@
-package com.steve.hotshots.ui
+package com.steve.hotpot.ui
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.steve.hotshots.R
-import com.steve.hotshots.databinding.FragmentEntryBinding
-import com.steve.hotshots.model.MovieListViewModel
+import com.steve.hotpot.R
+import com.steve.hotpot.databinding.FragmentEntryBinding
+import com.steve.hotpot.model.MovieListViewModel
 
 class EntryFragment : Fragment() {
 

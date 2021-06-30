@@ -1,4 +1,4 @@
-package com.steve.hotshots.model
+package com.steve.hotpot.model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

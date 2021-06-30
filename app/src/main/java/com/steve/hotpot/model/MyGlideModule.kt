@@ -1,4 +1,4 @@
-package com.steve.hotshots.model
+package com.steve.hotpot.model
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule

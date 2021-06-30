@@ -1,4 +1,4 @@
-package com.steve.hotshots.model
+package com.steve.hotpot.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

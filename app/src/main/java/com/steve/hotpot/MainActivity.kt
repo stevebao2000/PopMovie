@@ -1,4 +1,4 @@
-package com.steve.hotshots
+package com.steve.hotpot
 
 import android.content.pm.PackageManager
 import android.os.Build
@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import com.steve.hotshots.databinding.ActivityMainBinding
-import com.steve.hotshots.ui.EntryFragment
-import com.steve.hotshots.ui.ListFragment
+import com.steve.hotpot.databinding.ActivityMainBinding
+import com.steve.hotpot.ui.EntryFragment
+import com.steve.hotpot.ui.ListFragment
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

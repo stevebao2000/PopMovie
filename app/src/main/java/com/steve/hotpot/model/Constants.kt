@@ -1,4 +1,4 @@
-package com.steve.hotshots.model
+package com.steve.hotpot.model
 
 object Constants {
     const val baseUrl = "https://api.themoviedb.org/3/"

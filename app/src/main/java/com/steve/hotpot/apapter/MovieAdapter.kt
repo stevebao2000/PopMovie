@@ -1,19 +1,15 @@
-package com.steve.hotshots.apapter
+package com.steve.hotpot.apapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.steve.hotshots.MainActivity
-import com.steve.hotshots.R
-import com.steve.hotshots.databinding.MovieItemBinding
-import com.steve.hotshots.model.MovieEntry
-import com.steve.hotshots.model.MovieListViewModel
-import com.steve.hotshots.ui.ListFragment
+import com.steve.hotpot.MainActivity
+import com.steve.hotpot.R
+import com.steve.hotpot.databinding.MovieItemBinding
+import com.steve.hotpot.model.MovieEntry
+import com.steve.hotpot.model.MovieListViewModel
 
 class MovieAdapter(private val context: Context, private val movieList: ArrayList<MovieEntry>) :
     RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {

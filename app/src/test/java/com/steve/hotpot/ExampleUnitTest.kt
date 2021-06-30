@@ -1,4 +1,4 @@
-package com.steve.hotshots
+package com.steve.hotpot
 
 import org.junit.Test
 
