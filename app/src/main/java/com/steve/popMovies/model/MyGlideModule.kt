@@ -1,4 +1,4 @@
-package com.steve.hotpot.model
+package com.steve.popMovies.model
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule

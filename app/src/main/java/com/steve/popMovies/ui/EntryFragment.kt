@@ -1,4 +1,4 @@
-package com.steve.hotpot.ui
+package com.steve.popMovies.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.steve.hotpot.R
-import com.steve.hotpot.databinding.FragmentEntryBinding
-import com.steve.hotpot.model.MovieListViewModel
+import com.steve.popMovies.R
+import com.steve.popMovies.databinding.FragmentEntryBinding
+import com.steve.popMovies.model.MovieListViewModel
 
 class EntryFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.steve.hotpot.model
+package com.steve.popMovies.model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,6 +16,6 @@ class MovieListViewModel: ViewModel() {
         if (list.size > index)
             return list[index]
         else
-            return MovieEntry()
+            return list.last() // return last one
     }
 }

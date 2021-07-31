@@ -1,4 +1,4 @@
-package com.steve.hotpot.ui
+package com.steve.popMovies.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.steve.hotpot.apapter.MovieAdapter
-import com.steve.hotpot.databinding.FragmentListBinding
-import com.steve.hotpot.model.Constants
-import com.steve.hotpot.model.MovieEntry
-import com.steve.hotpot.model.MovieListViewModel
-import com.steve.hotpot.repository.network.MovieService
+import com.steve.popMovies.apapter.MovieAdapter
+import com.steve.popMovies.databinding.FragmentListBinding
+import com.steve.popMovies.model.Constants
+import com.steve.popMovies.model.MovieEntry
+import com.steve.popMovies.model.MovieListViewModel
+import com.steve.popMovies.repository.network.MovieService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main

@@ -1,4 +1,4 @@
-package com.steve.hotpot
+package com.steve.popMovies
 
 import android.content.pm.PackageManager
 import android.os.Build
@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.steve.hotpot.databinding.ActivityMainBinding
-import com.steve.hotpot.ui.EntryFragment
-import com.steve.hotpot.ui.ListFragment
+import com.steve.popMovies.databinding.ActivityMainBinding
+import com.steve.popMovies.ui.EntryFragment
+import com.steve.popMovies.ui.ListFragment
 
 
 class MainActivity : AppCompatActivity() {

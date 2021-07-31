@@ -1,7 +1,8 @@
-package com.steve.hotpot.repository.network
+package com.steve.popMovies.repository.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.steve.hotpot.model.MovieEntry
+import com.steve.popMovies.model.Constants
+import com.steve.popMovies.model.MovieEntry
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -15,7 +16,8 @@ private val API_KEY = "8a0db21487772a3656f33f4386cf27b4"
 interface MovieService {
     @GET("/discover/movie")
     suspend fun getPopularMovies(
-            @Query("sort_by") sortBy: String
+            @Query("sort_by") sortBy: String,
+            @Query("page") pageNum: Int
     ): ArrayList<MovieEntry>
 
     companion object {

@@ -1,4 +1,4 @@
-package com.steve.hotpot
+package com.steve.popMovies
 
 import org.junit.Test
 

@@ -1,2 +1,2 @@
-rootProject.name = "hotshots"
+rootProject.name = "PopMovies"
 include ':app'
