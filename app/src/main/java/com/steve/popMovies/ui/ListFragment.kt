@@ -6,9 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.steve.popMovies.R
 import com.steve.popMovies.apapter.MovieAdapter
 import com.steve.popMovies.databinding.FragmentListBinding
 import com.steve.popMovies.model.Constants
+import com.steve.popMovies.model.GlideApp
 import com.steve.popMovies.model.MovieEntry
 import com.steve.popMovies.model.MovieListViewModel
 import com.steve.popMovies.repository.network.MovieService
@@ -22,7 +26,8 @@ class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
     private lateinit var movieViewModel: MovieListViewModel
-    lateinit var movieAdapter: MovieAdapter
+    private lateinit var movieAdapter: MovieAdapter
+    private val logourl = "https://image.tmdb.org/t/p/w500/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,28 +41,38 @@ class ListFragment : Fragment() {
         binding = FragmentListBinding.inflate(inflater, container, false)
         val root = binding.root
         CoroutineScope(IO).launch {
-            getPopularMovies()
+            getPopularMovies(pageNum)
         }
+//
+//        GlideApp.with(requireActivity())
+//            .load(logourl)
+//            .error(R.drawable.error)
+//            .into(binding.logo)
 
-        val movieAdapter = MovieAdapter(requireContext(), movieViewModel.list)
+        movieAdapter = MovieAdapter(requireContext(), movieViewModel.list)
         binding.rvMovies.adapter = movieAdapter
-
+//        binding.rvMovies.layoutManager = LinearLayoutManager(requireContext())
         return root
     }
 
-    private suspend fun getPopularMovies() {
-        val list = MovieService.invoke().getPopularMovies(Constants.popular_value)
-        updateMovieList(list)
+    private suspend fun getPopularMovies(page: Int) {
+        pageNum = page
+        val tmdb = MovieService.invoke().getPopularMovies(Constants.popular_value, page)
+        updateMovieList(tmdb.results)
+        tmdb.results.map {println(it)}
     }
 
     private suspend fun updateMovieList(list: List<MovieEntry>) {
         withContext(Main) {
             movieViewModel.addMovies(list)
+            movieAdapter.notifyDataSetChanged()
         }
     }
 
     companion object {
         @JvmStatic
         fun newInstance() = ListFragment()
+        @JvmStatic
+        var pageNum: Int = 1
     }
 }

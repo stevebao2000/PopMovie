@@ -14,5 +14,5 @@ data class MovieEntry(
     @SerializedName("popularity")
     var score: Float,
     @SerializedName("release_date")
-    var releaseYear: Int
+    var releaseYear: String
 )

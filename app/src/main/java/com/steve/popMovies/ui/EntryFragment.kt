@@ -34,7 +34,7 @@ class EntryFragment : Fragment() {
 
         val movie = movieViewModel.getMovieAt(movieIndex)
         binding.title.text = movie.title
-        binding.genre.text = movie.genreName
+        binding.genre.text = movie.genreids[0].toString()
         binding.score.text = movie.score.toString()
         binding.year.text = movie.releaseYear.toString()
         if (movie.thumbnail.length > 1) {
