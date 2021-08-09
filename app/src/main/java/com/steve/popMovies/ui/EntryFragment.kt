@@ -32,18 +32,18 @@ class EntryFragment : Fragment() {
         binding = FragmentEntryBinding.inflate(inflater, container, false)
         val root = binding.root
 
-        val movie = movieViewModel.getMovieAt(movieIndex)
-        binding.title.text = movie.title
-        binding.genre.text = movie.genreids[0].toString()
-        binding.score.text = movie.score.toString()
-        binding.year.text = movie.releaseYear.toString()
-        if (movie.thumbnail.length > 1) {
-            Glide.with(requireActivity())
-                .load(movie.thumbnail)
-                .placeholder(R.drawable.loading)
-                .fitCenter()
-                .into(binding.imageView)
-        }
+//        val movie = movieViewModel.getMovieAt(movieIndex)
+//        binding.title.text = movie.title
+//        binding.genre.text = movie.genreids[0].toString()
+//        binding.score.text = movie.score.toString()
+//        binding.year.text = movie.releaseYear.toString()
+//        if (movie.thumbnail.length > 1) {
+//            Glide.with(requireActivity())
+//                .load(movie.thumbnail)
+//                .placeholder(R.drawable.loading)
+//                .fitCenter()
+//                .into(binding.imageView)
+//        }
         return root
     }
 

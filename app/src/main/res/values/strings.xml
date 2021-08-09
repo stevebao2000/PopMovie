@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">hotshots</string>
+    <string name="app_name">Pop Movies</string>
     <string name="movies">Movies:</string>
     <string name="genre">genre</string>
     <string name="year">year: 2001</string>
