@@ -1,4 +1,4 @@
-# Hotshots
+# PopMovie
 This project as a small RESTful service, it gets movie records from api.themoviedb.org
 Two fragments on MainActivity. One display fetched movie list (recycleview), once you click the 
 any movie, it will switch to another fragment to display the detail of the movie.
